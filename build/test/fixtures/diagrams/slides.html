@@ -1,0 +1,69 @@
+<!-- title: Diagram smoke test -->
+<!-- libs: mermaid chart tabulator -->
+
+<!-- 1 · A shared syntax makes diagrams easy to revise -->
+<section class="slide">
+  <h2>A shared syntax makes diagrams easy to revise</h2>
+  <div class="diagram-box"><pre class="mermaid">
+flowchart LR
+  accTitle: The deck authoring loop
+  accDescr: Write slides, build the deck, preview it, and return to writing.
+  A[Write slides] --> B[Build deck]
+  B --> C[Preview]:::highlight
+  C --> A
+  B --> D[Share HTML]:::muted
+  </pre></div>
+</section>
+
+<!-- 2 · Preview updates follow each save -->
+<section class="slide dark">
+  <h2>Preview updates follow each save</h2>
+  <div class="diagram-box"><pre class="mermaid">
+sequenceDiagram
+  accTitle: Preview rebuild sequence
+  accDescr: The author saves slides, the builder returns HTML, and the browser reloads.
+  participant A as Author
+  participant B as Builder
+  participant P as Preview
+  A->>B: Save slides
+  B->>P: Updated HTML
+  P-->>A: Reload browser
+  Note over B,P: No remote resources
+  </pre></div>
+</section>
+
+<!-- 3 · Diagrams inherit slide-local brand colours -->
+<section class="slide" style="--accent:#a6266f;--panel:rgba(166,38,111,.08)">
+  <h2>Diagrams inherit slide-local brand colours</h2>
+  <div class="diagram-box"><pre class="mermaid">
+flowchart LR
+  accTitle: Approval process
+  accDescr: A draft is reviewed, revised if necessary, and published after approval.
+  A[Draft] --> B{Approved?}:::highlight
+  B -->|Yes| C[Publish]
+  B -->|No| D[Revise]:::muted
+  D --> A
+  </pre></div>
+</section>
+
+<!-- 4 · Dark diagrams keep labels and emphasis readable -->
+<section class="slide dark">
+  <h2>Dark diagrams keep labels and emphasis readable</h2>
+  <div class="diagram-box"><pre class="mermaid">
+flowchart LR
+  accTitle: Offline deck assembly
+  accDescr: The build combines slide source, engine, and optional libraries into one HTML file.
+  A[Slides] --> D[Single HTML file]:::highlight
+  B[Engine] --> D
+  C[Optional libraries]:::muted --> D
+  </pre></div>
+</section>
+
+<!-- 5 · Existing libraries still render on hidden slides -->
+<section class="slide">
+  <h2>Existing libraries still render on hidden slides</h2>
+  <div class="cols">
+    <div class="chart-box"><canvas data-chart='{"type":"bar","data":{"labels":["A","B"],"datasets":[{"label":"Count","data":[2,4]}]}}'></canvas></div>
+    <div data-tabulator='{"columns":[{"title":"Name","field":"name"}],"data":[{"name":"one"}]}'></div>
+  </div>
+</section>

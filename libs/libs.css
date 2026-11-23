@@ -1,0 +1,14 @@
+/* slideware: layout for the optional libraries. Sized so that they fit a slide; colours come from the theme. */
+.chart-box{position:relative;height:640px;margin-block:auto}
+.diagram-box{height:640px;min-height:0;margin-block:auto}
+pre.mermaid{width:100%;height:100%;margin:0;white-space:normal;font:400 32px/1.4 var(--font-body)}
+pre.mermaid>svg{display:block;width:100%;height:100%;max-width:none!important}
+pre.mermaid[data-diagram-status="pending"]{visibility:hidden}
+pre.mermaid[data-diagram-status="error"]{box-sizing:border-box;height:auto;max-height:100%;overflow:auto;
+  padding:24px;border:2px solid var(--accent);border-radius:16px;color:var(--ink);background:var(--panel);white-space:pre-wrap}
+.diagram-measure{position:fixed;left:-10000px;top:0;width:1600px;visibility:hidden;pointer-events:none}
+@media print{.diagram-measure{display:none!important}}
+.tabulator-col{height:auto!important}
+.tabulator-col-content{padding:8px 12px!important}
+.tabulator{font-size:28px!important}
+.tabulator .tabulator-cell{padding:10px 12px!important}

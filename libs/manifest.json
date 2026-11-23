@@ -1,0 +1,33 @@
+{
+  "chart": {
+    "version": "4.6.1",
+    "license": "libs/chart/4.6.1/LICENSE.md",
+    "js": [
+      "libs/chart/4.6.1/chart.umd.min.js"
+    ],
+    "css": [
+      "libs/libs.css"
+    ]
+  },
+  "mermaid": {
+    "version": "12.3.0",
+    "license": "libs/mermaid/12.3.0/LICENSE",
+    "js": [
+      "libs/mermaid/12.3.0/mermaid.tiny.js"
+    ],
+    "css": [
+      "libs/libs.css"
+    ]
+  },
+  "tabulator": {
+    "version": "6.7.1",
+    "license": "libs/tabulator/6.7.1/LICENSE",
+    "js": [
+      "libs/tabulator/6.7.1/tabulator.min.js"
+    ],
+    "css": [
+      "libs/tabulator/6.7.1/tabulator_simple.min.css",
+      "libs/libs.css"
+    ]
+  }
+}

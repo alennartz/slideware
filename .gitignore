@@ -1,0 +1,9 @@
+decks/**
+
+# Checkout-local configuration and extensions; never overwrite user customizations on update.
+.local/
+.env
+.env.*
+!.env.example
+.agents/skills/local/
+.pi/extensions/local/
